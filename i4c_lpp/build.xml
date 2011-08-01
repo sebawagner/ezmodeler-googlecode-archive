@@ -153,7 +153,7 @@
 	</target>
 
 	<!-- Export SQL schema using mapping files and hibernate configuration -->
-<!--	<target name="Export SQL Schema" depends="Generate Mappings">-->
+<!--	<target name="Export SQL Schema" depends="Generate Mappings">
 	<target name="exportsql" depends="hibernate">
 		<taskdef name="schemaexport" classname="org.hibernate.tool.hbm2ddl.SchemaExportTask">
 			<classpath refid="schema.export.classpath" />
@@ -170,6 +170,7 @@
 		</schemaexport>
 
 	</target>
+	-->
 
 	<!-- Check timestamp on files -->
 	<target name="prepare">
