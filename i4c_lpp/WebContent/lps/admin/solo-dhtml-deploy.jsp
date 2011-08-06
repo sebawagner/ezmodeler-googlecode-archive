@@ -574,6 +574,7 @@ public Element getChild(Element elt, String name) {
     return null;
 }
 
+/*
 public Element parse(String content, javax.servlet.jsp.JspWriter out) throws IOException {
     try {
         // Create a DOM builder and parse the fragment
@@ -597,6 +598,6 @@ public Element parse(String content, javax.servlet.jsp.JspWriter out) throws IOE
         }
     return null;
 }
-
+*/
 
 %>

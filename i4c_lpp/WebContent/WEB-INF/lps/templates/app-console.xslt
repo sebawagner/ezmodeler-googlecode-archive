@@ -313,7 +313,7 @@ If you edit this file, please validate your work using http://validator.w3.org/
     </xsl:choose>
   </xsl:template>
 
-  <xsl:template match="error">
+  <xsl:template match="error2">
     <xsl:call-template name="str.subst">
       <xsl:with-param name="str" select="." />
       <xsl:with-param name="from" select="'&#xA;'" />
