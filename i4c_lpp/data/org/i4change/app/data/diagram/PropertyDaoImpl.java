@@ -256,7 +256,7 @@ public class PropertyDaoImpl extends HibernateDaoSupport {
 			property.setUuid(UUID.randomUUID().toString());
 			
 
-			Long propertyId = (Long) getSession().save(property);
+			Long propertyId = (Long) getHibernateTemplate().save(property);
 			
 //			session.flush();
 //			session.refresh(property);
@@ -307,7 +307,7 @@ public class PropertyDaoImpl extends HibernateDaoSupport {
 			property.setUpdatedby(insertedby);
 			property.setPropertyValidationTypeId(propertyValidationTypeId);
 			
-			getSession().update(property);
+			getHibernateTemplate().update(property);
 
 			this.propertyListItemDaoImpl.updatePropertyListItems(propertyId, propertyListValues);
 			
@@ -329,7 +329,7 @@ public class PropertyDaoImpl extends HibernateDaoSupport {
 			
 			property.setDeleted("true");
 			
-			getSession().update(property);
+			getHibernateTemplate().update(property);
 
 			return propertyId;
 			

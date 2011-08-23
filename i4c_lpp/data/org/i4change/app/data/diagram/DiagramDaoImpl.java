@@ -61,7 +61,7 @@ public class DiagramDaoImpl extends HibernateDaoSupport {
 			diagramrevision.setInsertedby(user_id);
 			diagramrevision.setComment(comment);
 
-			Long diagramrevisionId = (Long) getSession().save(diagramrevision);
+			Long diagramrevisionId = (Long) getHibernateTemplate().save(diagramrevision);
 
 			log.debug("added id " + diagramrevisionId);
 
@@ -77,7 +77,7 @@ public class DiagramDaoImpl extends HibernateDaoSupport {
 	public Long addDiagramrevisionByObject(Diagramrevision diagramrevision) {
 		try {
 
-			Long diagramrevisionId = (Long) getSession().save(diagramrevision);
+			Long diagramrevisionId = (Long) getHibernateTemplate().save(diagramrevision);
 
 			log.debug("added id " + diagramrevisionId);
 
@@ -118,7 +118,7 @@ public class DiagramDaoImpl extends HibernateDaoSupport {
 			Diagram diagram = this.getDiagramById(diagramId);
 			diagram.setParentDiagramObject(this.diagramObjectDaoImpl.getDiagramObjectById(parentDiagramObjectId));
 			
-			getSession().update(diagram);
+			getHibernateTemplate().update(diagram);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateDiagramParentbyId]",ex);
@@ -572,7 +572,7 @@ public class DiagramDaoImpl extends HibernateDaoSupport {
 			diagram.setUpdated(new Date());
 			diagram.setUpdatedby(this.userDaoImpl.getUserById(user_id));
 
-			getSession().update(diagram);
+			getHibernateTemplate().update(diagram);
 			
 			return diagramId;
 			
@@ -590,7 +590,7 @@ public class DiagramDaoImpl extends HibernateDaoSupport {
 			
 			//log.debug("[updateDiagramNameByObject] diagram.getDiagramId: "+diagram.getDiagramId());
 
-			getSession().update(diagram);
+			getHibernateTemplate().update(diagram);
 			
 			return diagram.getDiagramId();
 			
@@ -696,7 +696,7 @@ public class DiagramDaoImpl extends HibernateDaoSupport {
 	public Long addDiagramByObject(Diagram diagram) {
 		try {
 
-			Long diagramId = (Long) getSession().save(diagram);
+			Long diagramId = (Long) getHibernateTemplate().save(diagram);
 
 			log.debug("added diagramId " + diagramId);
 
@@ -719,7 +719,7 @@ public class DiagramDaoImpl extends HibernateDaoSupport {
 			diagram.setUpdated(new Date());
 			diagram.setUpdatedby(this.userDaoImpl.getUserById(user_id));
 
-			getSession().update(diagram);
+			getHibernateTemplate().update(diagram);
 			
 			return diagramId;
 			

@@ -22,7 +22,7 @@ public class ErrorManagement extends HibernateDaoSupport {
 			eType.setStarttime(new Date());
 			eType.setDeleted("false");
 			eType.setLabel_number(label_number);
-			Long newerrortype_id = (Long) getSession().save(eType);
+			Long newerrortype_id = (Long) getHibernateTemplate().save(eType);
 			return newerrortype_id;
 		} catch (HibernateException ex) {
 			log.error("[addErrorType]: " + ex);
@@ -56,7 +56,7 @@ public class ErrorManagement extends HibernateDaoSupport {
 			eValue.setDeleted("false");
 			eValue.setStarttime(new Date());
 			eValue.setLabel_number(label_number);
-			Long newerrorvalues_id = (Long) getSession().save(eValue);
+			Long newerrorvalues_id = (Long) getHibernateTemplate().save(eValue);
 			return newerrorvalues_id;
 		} catch (HibernateException ex) {
 			log.error("[addErrorType]: " + ex);
@@ -72,7 +72,7 @@ public class ErrorManagement extends HibernateDaoSupport {
 			eValue.setErrortype_id(errortype_id);
 			eValue.setStarttime(new Date());
 			eValue.setLabel_number(label_number);
-			Long newerrorvalues_id = (Long) getSession().save(eValue);
+			Long newerrorvalues_id = (Long) getHibernateTemplate().save(eValue);
 			return newerrorvalues_id;
 		} catch (HibernateException ex) {
 			log.error("[addErrorType]: " + ex);
@@ -88,7 +88,7 @@ public class ErrorManagement extends HibernateDaoSupport {
 			eValue.setErrortype_id(errortype_id);
 			eValue.setStarttime(new Date());
 			eValue.setLabel_number(label_number);
-			Long newerrorvalues_id = (Long) getSession().save(eValue);
+			Long newerrorvalues_id = (Long) getHibernateTemplate().save(eValue);
 			return newerrorvalues_id;
 		} catch (HibernateException ex) {
 			log.error("[addErrorType]: " + ex);

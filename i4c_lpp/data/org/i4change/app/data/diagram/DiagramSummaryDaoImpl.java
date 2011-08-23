@@ -45,7 +45,7 @@ public class DiagramSummaryDaoImpl extends HibernateDaoSupport {
 			diagramSummary.setDiagram(diagram);
 			diagramSummary.setDiagramNo(diagram.getDiagramNo());
 
-			Long diagramSummaryId = (Long) getSession().save(diagramSummary);
+			Long diagramSummaryId = (Long) getHibernateTemplate().save(diagramSummary);
 
 			return diagramSummaryId;
 		} catch (HibernateException ex) {
@@ -80,7 +80,7 @@ public class DiagramSummaryDaoImpl extends HibernateDaoSupport {
 			diagramSummary.setUpdated(new Date());
 			diagramSummary.setDiagram(diagram);
 
-			getSession().update(diagramSummary);
+			getHibernateTemplate().update(diagramSummary);
 
 		} catch (HibernateException ex) {
 			log.error("[updateDiagramSummary]",ex);

@@ -40,7 +40,7 @@ public class OrganisationsDiscountDaoImpl extends HibernateDaoSupport {
 			orgDiscount.setInserted(new Date());
 			orgDiscount.setDeleted("false");
 			
-			long id = (Long) getSession().save(orgDiscount);
+			long id = (Long) getHibernateTemplate().save(orgDiscount);
 			
 			return id;
 		} catch (HibernateException ex) {
@@ -77,7 +77,7 @@ public class OrganisationsDiscountDaoImpl extends HibernateDaoSupport {
 			
 			orgDiscount.setDeleted("true");
 			
-			getSession().update(orgDiscount);
+			getHibernateTemplate().update(orgDiscount);
 			
 		} catch (HibernateException ex) {
 			log.error("[deleteOrganisationsDiscount]" ,ex);

@@ -397,7 +397,7 @@ public class DiagramObjectDaoImpl extends HibernateDaoSupport {
 	public Long addDiagramObjectByObject(DiagramObject diagramObject) {
 		try {
 			
-			Long diagramObjectId = (Long) getSession().save(diagramObject);
+			Long diagramObjectId = (Long) getHibernateTemplate().save(diagramObject);
 
 			log.debug("addDiagramObject: " + diagramObjectId);
 
@@ -421,7 +421,7 @@ public class DiagramObjectDaoImpl extends HibernateDaoSupport {
 			diagramObject.setUpdatedby(this.userDaoImpl.getUserById(user_id));
 			diagramObject.setDeleted("true");
 			
-			getSession().update(diagramObject);
+			getHibernateTemplate().update(diagramObject);
 
 			log.debug("addDiagramObject: " + diagramObjectId);
 
@@ -484,7 +484,7 @@ public class DiagramObjectDaoImpl extends HibernateDaoSupport {
 				diagramObject.setAssignee(null);
 			}
 
-			getSession().update(diagramObject);
+			getHibernateTemplate().update(diagramObject);
 
 			log.debug("addDiagramObject: " + diagramObjectId);
 
@@ -505,7 +505,7 @@ public class DiagramObjectDaoImpl extends HibernateDaoSupport {
 	public Long updateDiagramObjectByObject(DiagramObject diagramObject){
 		try {
 			
-			getSession().update(diagramObject);
+			getHibernateTemplate().update(diagramObject);
 
 			return diagramObject.getDiagramObjectId();
 			

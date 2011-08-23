@@ -196,7 +196,7 @@ public class Configurationmanagement extends HibernateDaoSupport {
 			configuration.setComment(comment);
 			if (USER_ID!=null) configuration.setUser_id(USER_ID);
 			try {
-				getSession().save(configuration);
+				getHibernateTemplate().save(configuration);
 //				session.flush();
 //				session.clear();
 //				session.refresh(configuration);
@@ -242,7 +242,7 @@ public class Configurationmanagement extends HibernateDaoSupport {
 
 	public Long addConfig(Configuration conf){
 		try {
-			Long configuration_id = (Long) getSession().save(conf);
+			Long configuration_id = (Long) getHibernateTemplate().save(conf);
 			return configuration_id;
 		} catch (HibernateException ex) {
 			log.error("[updateConfByUID]: " ,ex);
@@ -254,7 +254,7 @@ public class Configurationmanagement extends HibernateDaoSupport {
 	
 	public Long updateConfig(Configuration conf){
 		try {
-			getSession().update(conf);
+			getHibernateTemplate().update(conf);
 			return conf.getConfiguration_id();
 		} catch (HibernateException ex) {
 			log.error("[updateConfByUID]: " ,ex);

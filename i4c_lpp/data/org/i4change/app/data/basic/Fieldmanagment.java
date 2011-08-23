@@ -203,7 +203,7 @@ public class Fieldmanagment extends HibernateDaoSupport {
 			flv.setLabel_number(label_number);
 			//flv.setDeleted();
 
-			Long fieldlanguagesvaluesId = (Long) getSession().save(flv);
+			Long fieldlanguagesvaluesId = (Long) getHibernateTemplate().save(flv);
 
 			return fieldlanguagesvaluesId;
 		} catch (HibernateException ex) {
@@ -217,7 +217,7 @@ public class Fieldmanagment extends HibernateDaoSupport {
 	public void updateFieldValueByFieldAndLanguage(Fieldlanguagesvalues flv) {
 		try {
 
-			getSession().update(flv);
+			getHibernateTemplate().update(flv);
 
 		} catch (HibernateException ex) {
 			log.error("[updateFieldValueByFieldAndLanguage]: ",ex);
@@ -236,7 +236,7 @@ public class Fieldmanagment extends HibernateDaoSupport {
 			fl.setName(fieldName);
 			fl.setDeleted("false");
 
-			Long fieldId = (Long) getSession().save(fl);
+			Long fieldId = (Long) getHibernateTemplate().save(fl);
 
 			return fieldId;
 		} catch (HibernateException ex) {
@@ -634,12 +634,12 @@ public class Fieldmanagment extends HibernateDaoSupport {
 	}
 	
 	public void updateField(Fieldvalues fv) throws Exception {
-		getSession().update(fv);
+		getHibernateTemplate().update(fv);
 	}
 
 	private void updateFieldLanguagesLabel(Fieldlanguagesvalues flv)
 			throws Exception {
-		getSession().update(flv);
+		getHibernateTemplate().update(flv);
 	}	
 
 }

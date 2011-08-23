@@ -39,7 +39,7 @@ public class ProjectRelationDaoImpl extends HibernateDaoSupport {
 			projectRelation.setDiagramNo(diagramNo);
 			projectRelation.setDiagramObject(diagramObject);
 			
-			Long projectRelationId = (Long) getSession().save(projectRelation);
+			Long projectRelationId = (Long) getHibernateTemplate().save(projectRelation);
 			
 			return projectRelationId;
 		} catch (HibernateException ex) {
@@ -53,7 +53,7 @@ public class ProjectRelationDaoImpl extends HibernateDaoSupport {
 	public void updateProjectRelation(ProjectRelation projectRelation){
 		try {
 		
-			getSession().update(projectRelation);
+			getHibernateTemplate().update(projectRelation);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateProjectRelation]",ex);

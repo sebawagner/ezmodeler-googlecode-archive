@@ -49,7 +49,7 @@ public class WebItemRelationDaoImpl extends HibernateDaoSupport {
 			webItemRelation.setDeleted("false");
 			webItemRelation.setInserted(new Date());
 			
-			Long webItemRelationId = (Long) getSession().save(webItemRelation);
+			Long webItemRelationId = (Long) getHibernateTemplate().save(webItemRelation);
 			
 			return webItemRelationId;
 			
@@ -67,7 +67,7 @@ public class WebItemRelationDaoImpl extends HibernateDaoSupport {
 			webItemRelation.setDeleted("true");
 			webItemRelation.setUpdated(new Date());
 			
-			getSession().update(webItemRelation);
+			getHibernateTemplate().update(webItemRelation);
 			
 		} catch (HibernateException ex) {
 			log.error("[deleteWebItemRelation]" ,ex);

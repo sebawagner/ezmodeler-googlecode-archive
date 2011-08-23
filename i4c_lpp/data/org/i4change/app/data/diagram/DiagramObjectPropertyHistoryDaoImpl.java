@@ -55,7 +55,7 @@ public class DiagramObjectPropertyHistoryDaoImpl extends HibernateDaoSupport {
 			diagramObjectPropertyHistory.setValue(value);
 			diagramObjectPropertyHistory.setDiagramId(diagramId);
 
-			Long diagramObjectPropertyHistoryId = (Long) getSession().save(diagramObjectPropertyHistory);
+			Long diagramObjectPropertyHistoryId = (Long) getHibernateTemplate().save(diagramObjectPropertyHistory);
 			
 			log.debug("add diagramObjectPropertyHistoryId " + diagramObjectPropertyHistoryId);
 

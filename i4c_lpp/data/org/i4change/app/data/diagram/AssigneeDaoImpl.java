@@ -85,7 +85,7 @@ public class AssigneeDaoImpl extends HibernateDaoSupport {
 			assignee.setInsertedby(user_id);
 			assignee.setAssignee(this.userDaoImpl.getUserById(assigneeUserId));
 
-			Long assigneeId = (Long) getSession().save(assignee);
+			Long assigneeId = (Long) getHibernateTemplate().save(assignee);
 
 			log.debug("addAssgineeObject: " + assigneeId);
 
@@ -101,7 +101,7 @@ public class AssigneeDaoImpl extends HibernateDaoSupport {
 	public Assignee addAssgineeByObject(Assignee assignee) {
 		try {
 
-			Long assigneeId = (Long) getSession().save(assignee);
+			Long assigneeId = (Long) getHibernateTemplate().save(assignee);
 
 			log.debug("addAssgineeByObject: " + assigneeId);
 
@@ -122,7 +122,7 @@ public class AssigneeDaoImpl extends HibernateDaoSupport {
 			assignee.setUpdatedBy(user_id);
 			assignee.setAssignee(this.userDaoImpl.getUserById(assigneeUserId));
 
-			getSession().update(assignee);
+			getHibernateTemplate().update(assignee);
 
 		} catch (HibernateException ex) {
 			log.error("[updateAssginee]",ex);

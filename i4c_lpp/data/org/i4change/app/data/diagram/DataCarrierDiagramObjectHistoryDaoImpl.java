@@ -20,7 +20,7 @@ public class DataCarrierDiagramObjectHistoryDaoImpl extends HibernateDaoSupport 
 			dCarrier.setInserted(new Date());
 			dCarrier.setInsertedBy(user_id);
 			
-			Long dataCarrierDiagramObjectId = (Long) getSession().save(dCarrier);
+			Long dataCarrierDiagramObjectId = (Long) getHibernateTemplate().save(dCarrier);
 
 			log.debug("dataCarrierDiagramObjectId: " + dataCarrierDiagramObjectId);
 

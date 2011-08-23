@@ -28,7 +28,7 @@ public class Languagemanagement extends HibernateDaoSupport {
 			fl.setDeleted("false");
 			fl.setName(langName);
 
-			Long languages_id = (Long)getSession().save(fl);
+			Long languages_id = (Long)getHibernateTemplate().save(fl);
 
 			return languages_id;
 		} catch (HibernateException ex) {
@@ -71,7 +71,7 @@ public class Languagemanagement extends HibernateDaoSupport {
 
 	
 	private void updateLanguage(FieldLanguage fl) throws Exception {
-		getSession().update(fl);
+		getHibernateTemplate().update(fl);
 	}	
 
 

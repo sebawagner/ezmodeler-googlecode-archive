@@ -28,7 +28,7 @@ public class InvoiceDaoImpl extends HibernateDaoSupport {
 				return invoice.getInvoiceId();
 			}
 
-			Long invoiceId = (Long) getSession().save(invoice);
+			Long invoiceId = (Long) getHibernateTemplate().save(invoice);
 			
 			return invoiceId;
 			
@@ -43,7 +43,7 @@ public class InvoiceDaoImpl extends HibernateDaoSupport {
 	public void updateInvoice(Invoice invoice){
 		try {
 
-			getSession().update(invoice);
+			getHibernateTemplate().update(invoice);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateInvoice]",ex);

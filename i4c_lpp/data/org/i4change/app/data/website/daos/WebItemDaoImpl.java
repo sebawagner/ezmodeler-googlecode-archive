@@ -111,7 +111,7 @@ public class WebItemDaoImpl extends HibernateDaoSupport {
 			webItem.setIsHelpItem(isHelpItem);
 			webItem.setOrderInt(orderInt);
 			
-			Long webItemId = (Long) getSession().save(webItem);
+			Long webItemId = (Long) getHibernateTemplate().save(webItem);
 			
 			//I Don't know why but if you do a select right after the insert the Object is NOT there
 			
@@ -147,7 +147,7 @@ public class WebItemDaoImpl extends HibernateDaoSupport {
 			webItem.setIsHelpItem(isHelpItem);
 			webItem.setOrderInt(orderInt);
 			
-			getSession().update(webItem);
+			getHibernateTemplate().update(webItem);
 			
 			
 		} catch (HibernateException ex) {
@@ -284,7 +284,7 @@ public class WebItemDaoImpl extends HibernateDaoSupport {
 			webItem.setDeleted("true");
 			webItem.setUpdated(new Date());
 			
-			getSession().update(webItem);
+			getHibernateTemplate().update(webItem);
 			
 		} catch (HibernateException ex) {
 			log.error("[deleteWebItemById]" ,ex);

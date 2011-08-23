@@ -176,7 +176,7 @@ public class OrganisationUserDaoImpl extends HibernateDaoSupport {
 //			Object idf = HibernateUtil.createSession();
 //			Session session = HibernateUtil.getSession();
 //			Transaction tx = session.beginTransaction();
-			getSession().update(ou);
+			getHibernateTemplate().update(ou);
 //			tx.commit();
 //			HibernateUtil.closeSession(idf);
 			

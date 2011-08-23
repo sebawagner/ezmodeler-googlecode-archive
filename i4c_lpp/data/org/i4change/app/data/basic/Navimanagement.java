@@ -101,7 +101,7 @@ public class Navimanagement extends HibernateDaoSupport {
 //			Transaction tx = session.beginTransaction();
 			// Criteria crit = session.createCriteria();
 
-			Long global_id = (Long) getSession().save(ng);
+			Long global_id = (Long) getHibernateTemplate().save(ng);
 
 //			tx.commit();
 //			HibernateUtil.closeSession(idf);
@@ -138,7 +138,7 @@ public class Navimanagement extends HibernateDaoSupport {
 //			Transaction tx = session.beginTransaction();
 			// Criteria crit = session.createCriteria();
 
-			Long main_id = (Long) getSession().save(ng);
+			Long main_id = (Long) getHibernateTemplate().save(ng);
 
 //			tx.commit();
 //			HibernateUtil.closeSession(idf);
@@ -175,7 +175,7 @@ public class Navimanagement extends HibernateDaoSupport {
 //			Transaction tx = session.beginTransaction();
 			// Criteria crit = session.createCriteria();
 
-			Long sub_id = (Long) getSession().save(ng);
+			Long sub_id = (Long) getHibernateTemplate().save(ng);
 
 //			tx.commit();
 //			HibernateUtil.closeSession(idf);

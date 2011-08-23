@@ -42,7 +42,7 @@ public class DiagramObjectOrganisationDaoImpl extends HibernateDaoSupport {
 			diagramObjectOrganisation.setInserted(new Date());
 			diagramObjectOrganisation.setInsertedby(insertedby);
 			
-			Long diagramobjectorganisationId = (Long) getSession().save(diagramObjectOrganisation);
+			Long diagramobjectorganisationId = (Long) getHibernateTemplate().save(diagramObjectOrganisation);
 		
 			log.debug("select diagramobjectorganisationId " + diagramobjectorganisationId);
 		

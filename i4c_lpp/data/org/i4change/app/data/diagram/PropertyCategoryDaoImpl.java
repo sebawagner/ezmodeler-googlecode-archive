@@ -47,7 +47,7 @@ public class PropertyCategoryDaoImpl extends HibernateDaoSupport {
 				propertyCategory.setOrganisation(this.organisationDaoImpl.getOrganisationById(organisation_id));
 			}
 
-			Long propertyCategoryId = (Long) getSession().save(propertyCategory);
+			Long propertyCategoryId = (Long) getHibernateTemplate().save(propertyCategory);
 
 			log.debug("added id " + propertyCategoryId);
 
@@ -101,7 +101,7 @@ public class PropertyCategoryDaoImpl extends HibernateDaoSupport {
 				propertyCategory.setOrganisation(this.organisationDaoImpl.getOrganisationById(organisation_id));
 			}
 
-			getSession().update(propertyCategory);
+			getHibernateTemplate().update(propertyCategory);
 
 			log.debug("added id " + propertyCategoryId);
 
@@ -120,7 +120,7 @@ public class PropertyCategoryDaoImpl extends HibernateDaoSupport {
 			
 			propertyCategory.setDeleted("true");
 
-			getSession().update(propertyCategory);
+			getHibernateTemplate().update(propertyCategory);
 
 			return propertyCategoryId;
 		} catch (HibernateException ex) {

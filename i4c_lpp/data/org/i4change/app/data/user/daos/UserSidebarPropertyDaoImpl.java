@@ -84,7 +84,7 @@ public class UserSidebarPropertyDaoImpl extends HibernateDaoSupport {
 			sideBarProperties.setUsers(this.userDaoImpl.getUserById(user_id));
 			sideBarProperties.setDiagramNo(diagramNo);
 			
-			Long sideBarPropertiesId = (Long) getSession().save(sideBarProperties);
+			Long sideBarPropertiesId = (Long) getHibernateTemplate().save(sideBarProperties);
 			
 			return sideBarPropertiesId;
 		} catch (HibernateException ex) {
@@ -99,7 +99,7 @@ public class UserSidebarPropertyDaoImpl extends HibernateDaoSupport {
 	public Long addUserSidebarPropertyByObject(UserSidebarProperty sideBarProperties) {
 		try {
 			
-			Long sideBarPropertiesId = (Long) getSession().save(sideBarProperties);
+			Long sideBarPropertiesId = (Long) getHibernateTemplate().save(sideBarProperties);
 			
 			return sideBarPropertiesId;
 		} catch (HibernateException ex) {
@@ -127,7 +127,7 @@ public class UserSidebarPropertyDaoImpl extends HibernateDaoSupport {
 			
 			sideBarProperties.setUpdated(new Date());
 
-			getSession().update(sideBarProperties);
+			getHibernateTemplate().update(sideBarProperties);
 			
 			return userSidebarPropertyId;
 		} catch (HibernateException ex) {

@@ -19,7 +19,7 @@ public class DiagramInstanceObjectDaoImpl extends HibernateDaoSupport {
 	public void updateDiagramInstanceObject(DiagramInstanceObject diagramInstanceObj) {
 		try {
 
-			getSession().update(diagramInstanceObj);
+			getHibernateTemplate().update(diagramInstanceObj);
 
 			log.debug("updateDiagramInstanceObject: " + diagramInstanceObj);
 
@@ -57,7 +57,7 @@ public class DiagramInstanceObjectDaoImpl extends HibernateDaoSupport {
 	public Long addDiagramInstanceObjectByObject(DiagramInstanceObject diagramInstanceObject) {
 		try {
 
-			Long diagramInstanceObjectId = (Long) getSession().save(diagramInstanceObject);
+			Long diagramInstanceObjectId = (Long) getHibernateTemplate().save(diagramInstanceObject);
 
 			log.debug("addDiagramInstanceObject: " + diagramInstanceObjectId);
 

@@ -52,7 +52,7 @@ public class IssueAssigneeDaoImpl extends HibernateDaoSupport {
 			issueAssignee.setInsertedby(this.userDaoImpl.getUserById(insertedBy));
 			issueAssignee.setDeleted("false");
 
-			Long issueAssigneeId = (Long) getSession().save(issueAssignee);
+			Long issueAssigneeId = (Long) getHibernateTemplate().save(issueAssignee);
 
 			log.debug("added id " + issueAssigneeId);
 
@@ -252,7 +252,7 @@ public class IssueAssigneeDaoImpl extends HibernateDaoSupport {
 			issueAssignee.setAssignee(this.userDaoImpl.getUserById(assigneeUser_id));
 			issueAssignee.setUpdatedBy(this.userDaoImpl.getUserById(insertedBy));
 
-			getSession().update(issueAssignee);
+			getHibernateTemplate().update(issueAssignee);
 
 			//Add a mail to the Spool for the Assignee
 			this.mailmanagement.addMailToSpoolAboutUpdatedIssue(insertedBy, assigneeUser_id, diagramName, 

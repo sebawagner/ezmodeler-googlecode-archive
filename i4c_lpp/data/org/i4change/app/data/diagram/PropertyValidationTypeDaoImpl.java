@@ -39,7 +39,7 @@ public class PropertyValidationTypeDaoImpl extends HibernateDaoSupport {
 			propertyValidationType.setInserted(new Date());
 			propertyValidationType.setHeight(height);
 
-			Long propertyValidationTypeId = (Long) getSession().save(propertyValidationType);
+			Long propertyValidationTypeId = (Long) getHibernateTemplate().save(propertyValidationType);
 
 			log.debug("select propertyValidationTypeId " + propertyValidationTypeId);
 

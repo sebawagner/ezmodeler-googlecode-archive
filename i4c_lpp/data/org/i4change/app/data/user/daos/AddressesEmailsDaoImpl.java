@@ -31,7 +31,7 @@ public class AddressesEmailsDaoImpl extends HibernateDaoSupport {
 			addEmails.setMail(this.emailDaoImpl.getEmailById(mail_id));
 			addEmails.setStarttime(new Date());
 			
-			Long addEmailsId = (Long) getSession().save(addEmails);
+			Long addEmailsId = (Long) getHibernateTemplate().save(addEmails);
 			
 			return addEmailsId;
 		} catch (HibernateException ex) {

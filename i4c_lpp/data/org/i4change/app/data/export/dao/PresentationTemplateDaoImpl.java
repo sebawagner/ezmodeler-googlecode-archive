@@ -57,7 +57,7 @@ public class PresentationTemplateDaoImpl extends HibernateDaoSupport {
 			presentationTemplate.setTextSpanStyleIndent(textSpanIndent);
 			presentationTemplate.setFootery(footery);
 			
-			Long presentationTemplateId = (Long) getSession().save(presentationTemplate);
+			Long presentationTemplateId = (Long) getHibernateTemplate().save(presentationTemplate);
 
 			return presentationTemplateId;
 		} catch (HibernateException ex) {

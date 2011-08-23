@@ -76,7 +76,7 @@ public class Sessionmanagement extends HibernateDaoSupport {
 //			log.error("Save Session +++ ");
 //			Transaction tx = getSession().beginTransaction();
 
-			getSession().save(sessiondata);
+			getHibernateTemplate().save(sessiondata);
 			
 			//Einmal die Session flushen zum starten der Anwendung
 			getSession().flush();
@@ -183,7 +183,7 @@ public class Sessionmanagement extends HibernateDaoSupport {
 			sd.setUser_id(USER_ID);
 //			session.flush();
 			
-			getSession().update(sd);
+			getHibernateTemplate().update(sd);
 			
 //			session.flush();
 //			tx.commit();
@@ -223,7 +223,7 @@ public class Sessionmanagement extends HibernateDaoSupport {
 //				Object idf2 = HibernateUtil.createSession();
 //				Session session2 = HibernateUtil.getSession();
 //				Transaction tx2 = session2.beginTransaction();				
-				getSession().update(sessionDat);
+				getHibernateTemplate().update(sessionDat);
 //				session2.flush();
 //				tx2.commit();
 //				HibernateUtil.closeSession(idf2);	

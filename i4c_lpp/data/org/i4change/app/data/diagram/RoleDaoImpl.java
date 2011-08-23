@@ -213,7 +213,7 @@ public class RoleDaoImpl extends HibernateDaoSupport {
 	public Long addRoleByObject(Role role) {
 		try {
 			
-			Long rolesId = (Long) getSession().save(role);
+			Long rolesId = (Long) getHibernateTemplate().save(role);
 			
 			return rolesId;
 			
@@ -235,7 +235,7 @@ public class RoleDaoImpl extends HibernateDaoSupport {
 			role.setDeleted("false");
 			role.setRoleObject(this.diagramObjectDaoImpl.getDiagramObjectById(diagramObjectId));
 			
-			getSession().update(role);
+			getHibernateTemplate().update(role);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateRole]",ex);
@@ -252,7 +252,7 @@ public class RoleDaoImpl extends HibernateDaoSupport {
 			role.setUpdatedBy(updatedBy);
 			role.setDeleted("true");
 			
-			getSession().update(role);
+			getHibernateTemplate().update(role);
 			
 		} catch (HibernateException ex) {
 			log.error("[deleteRole]",ex);

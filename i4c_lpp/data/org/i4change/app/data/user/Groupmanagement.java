@@ -86,7 +86,7 @@ public class Groupmanagement extends HibernateDaoSupport {
 			usersusergroups.setStarttime(new Date());
 			usersusergroups.setUpdatetime(null);
 			try {
-				getSession().save(usersusergroups);
+				getHibernateTemplate().save(usersusergroups);
 				//session.flush();
 				//session.clear();
 				//session.refresh(usersusergroups);
@@ -337,7 +337,7 @@ public class Groupmanagement extends HibernateDaoSupport {
 			usergroups.setStarttime(new Date());
 			usergroups.setUpdatetime(null);
 			try {
-				getSession().save(usergroups);
+				getHibernateTemplate().save(usergroups);
 //				session.flush();
 //				session.clear();
 //				session.refresh(usergroups);

@@ -44,7 +44,7 @@ public class DownloadHashDaoImpl extends HibernateDaoSupport {
 			downloadHash.setHash(hash);
 			downloadHash.setUsed(false);
 
-			Long downloadHashId = (Long) getSession().save(downloadHash);
+			Long downloadHashId = (Long) getHibernateTemplate().save(downloadHash);
 			
 			return hash;
 			
@@ -60,7 +60,7 @@ public class DownloadHashDaoImpl extends HibernateDaoSupport {
 		try {
 			
 			//get all users of this Organization
-			getSession().update(downloadHash);
+			getHibernateTemplate().update(downloadHash);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateDownloadHash] ",ex);

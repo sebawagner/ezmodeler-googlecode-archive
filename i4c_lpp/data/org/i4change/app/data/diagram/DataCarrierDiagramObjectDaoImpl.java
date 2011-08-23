@@ -31,7 +31,7 @@ public class DataCarrierDiagramObjectDaoImpl extends HibernateDaoSupport {
 				dCarrier.setDataCarrierObjectdiagramObjectId(dataCarrierObjectdiagramObjectId);
 				dCarrier.setDiagramObjectId(diagramObjectId);
 	
-				Long dataCarrierDiagramObjectId = (Long) getSession().save(dCarrier);
+				Long dataCarrierDiagramObjectId = (Long) getHibernateTemplate().save(dCarrier);
 	
 				log.debug("dataCarrierDiagramObjectId: " + dataCarrierDiagramObjectId);
 			
@@ -42,7 +42,7 @@ public class DataCarrierDiagramObjectDaoImpl extends HibernateDaoSupport {
 				dCarrier.setUpdated(new Date());
 				dCarrier.setUpdatedBy(user_id);
 	
-				getSession().update(dCarrier);
+				getHibernateTemplate().update(dCarrier);
 	
 				return dCarrier.getDataCarrierObjectdiagramObjectId();
 			}
@@ -59,7 +59,7 @@ public class DataCarrierDiagramObjectDaoImpl extends HibernateDaoSupport {
 	public Long addDataCarrierDiagramObjectByObject(DataCarrierDiagramObject dCarrier) {
 		try {
 
-			Long dataCarrierDiagramObjectId = (Long) getSession().save(dCarrier);
+			Long dataCarrierDiagramObjectId = (Long) getHibernateTemplate().save(dCarrier);
 
 			log.debug("dataCarrierDiagramObjectId: " + dataCarrierDiagramObjectId);
 

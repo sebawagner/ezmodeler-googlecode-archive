@@ -97,9 +97,9 @@ public class UserPropertyDaoImpl extends HibernateDaoSupport {
 			userProperties.setKeyItem(key);
 			
 			if (userProperties.getUserPropertyId() != 0) {
-				getSession().update(userProperties);
+				getHibernateTemplate().update(userProperties);
 			} else {
-				getSession().save(userProperties);
+				getHibernateTemplate().save(userProperties);
 			}
 			
 		} catch (HibernateException ex) {

@@ -42,7 +42,7 @@ public class ProjectDaoImpl extends HibernateDaoSupport {
 			project.setOwner(this.userDaoImpl.getUserById(userId));
 			project.setInserted(new Date());
 			
-			Long projectId = (Long) getSession().save(project);
+			Long projectId = (Long) getHibernateTemplate().save(project);
 			
 			return projectId;
 		} catch (HibernateException ex) {
@@ -71,7 +71,7 @@ public class ProjectDaoImpl extends HibernateDaoSupport {
 			
 			project.setUpdated(new Date());
 			
-			getSession().update(project);
+			getHibernateTemplate().update(project);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateProject]",ex);

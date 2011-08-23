@@ -20,7 +20,7 @@ public class ReportTypesDaoImpl extends HibernateDaoSupport {
 			reportType.setName(name);
 			reportType.setInserted(new Date());
 			
-			Long reportTypeId = (Long) getSession().save(reportType);
+			Long reportTypeId = (Long) getHibernateTemplate().save(reportType);
 			
 			return reportTypeId;
 		} catch (HibernateException ex) {

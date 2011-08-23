@@ -207,7 +207,7 @@ public class ObjectTypeDaoImpl extends HibernateDaoSupport {
 			oType.setDeleted("false");
 			oType.setInserted(new Date());
 
-			Long objectTypeId = (Long) getSession().save(oType);
+			Long objectTypeId = (Long) getHibernateTemplate().save(oType);
 			
 			return objectTypeId;
 		} catch (HibernateException ex) {
@@ -294,9 +294,9 @@ public class ObjectTypeDaoImpl extends HibernateDaoSupport {
 			oType.setInserted(new Date());
 
 			if (objectTypeId == null || objectTypeId == 0 || objectTypeId.equals(0)) {
-				objectTypeId = (Long) getSession().save(oType);
+				objectTypeId = (Long) getHibernateTemplate().save(oType);
 			} else {
-				getSession().update(oType);
+				getHibernateTemplate().update(oType);
 			}
 			
 			return objectTypeId;
@@ -333,7 +333,7 @@ public class ObjectTypeDaoImpl extends HibernateDaoSupport {
 			oType.setDeleted("false");
 			oType.setInserted(new Date());
 
-			getSession().update(oType);
+			getHibernateTemplate().update(oType);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateObjectType]",ex);

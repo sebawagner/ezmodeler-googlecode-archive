@@ -50,7 +50,7 @@ public class Addressmanagement extends HibernateDaoSupport {
 			adr.setZip(zip);
 			adr.setStates(st);
 
-			Long id = (Long) getSession().save(adr);
+			Long id = (Long) getHibernateTemplate().save(adr);
 
 			log.debug("added id " + id);
 
@@ -81,7 +81,7 @@ public class Addressmanagement extends HibernateDaoSupport {
 			adr.setZip(zip);
 			adr.setStates(st);
 
-			Long id = (Long) getSession().save(adr);
+			Long id = (Long) getHibernateTemplate().save(adr);
 
 			log.debug("added id " + id);
 
@@ -97,7 +97,7 @@ public class Addressmanagement extends HibernateDaoSupport {
 	public void saveAddressByObject(Adresses adr) {
 		try {
 			
-			getSession().saveOrUpdate(adr);
+			getHibernateTemplate().saveOrUpdate(adr);
 		
 		} catch (HibernateException ex) {
 			log.error(ex);
@@ -155,7 +155,7 @@ public class Addressmanagement extends HibernateDaoSupport {
 			adr.setZip(zip);
 			adr.setStates(st);
 
-			getSession().update(adr);
+			getHibernateTemplate().update(adr);
 
 
 			return adr;
@@ -183,7 +183,7 @@ public class Addressmanagement extends HibernateDaoSupport {
 			Adresses addrRemote = this.getAdressbyId(addr.getAdresses_id());
 			addr.setEmails(addrRemote.getEmails());
 
-			getSession().update(addr);
+			getHibernateTemplate().update(addr);
 			//session.flush();
 
 			return addr;

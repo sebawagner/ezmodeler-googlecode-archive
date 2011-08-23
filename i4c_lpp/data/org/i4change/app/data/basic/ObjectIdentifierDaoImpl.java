@@ -64,7 +64,7 @@ public class ObjectIdentifierDaoImpl extends HibernateDaoSupport {
 	public Long addNewObjectIdentifier(ObjectIdentifier objIdent) {
 		try {
 			// Criteria crit = session.createCriteria();
-			long objIdent_id = (Long) getSession().save(objIdent);
+			long objIdent_id = (Long) getHibernateTemplate().save(objIdent);
 			
 			log.debug("objIdent_id "+objIdent_id);
 			return objIdent_id;
@@ -83,7 +83,7 @@ public class ObjectIdentifierDaoImpl extends HibernateDaoSupport {
 			objIdent.setUpdated(new Date());
 			objIdent.setCurrentid(new Long(0));
 			// Criteria crit = session.createCriteria();
-			long objIdent_id = (Long) getSession().save(objIdent);
+			long objIdent_id = (Long) getHibernateTemplate().save(objIdent);
 			
 			log.debug("objIdent_id "+objIdent_id);
 			return objIdent_id;
@@ -100,7 +100,7 @@ public class ObjectIdentifierDaoImpl extends HibernateDaoSupport {
 			objIdent.setUpdated(new Date());
 			objIdent.setCurrentid(objIdent.getCurrentid()+1);
 			// Criteria crit = session.createCriteria();
-			getSession().update(objIdent);
+			getHibernateTemplate().update(objIdent);
 //			session.flush();
 //			session.update(objIdent);
 //			session.clear();

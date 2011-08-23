@@ -149,7 +149,7 @@ public class HelpTopicServiceDaoImpl extends HibernateDaoSupport {
 			helpTopic.setTopicLabelId(topicLabelId);
 			helpTopic.setHelpName(helpName);
 			
-			Long helptopicId = (Long) getSession().save(helpTopic);
+			Long helptopicId = (Long) getHibernateTemplate().save(helpTopic);
 
 			log.debug("addHelpTopic: " + helptopicId);
 
@@ -188,7 +188,7 @@ public class HelpTopicServiceDaoImpl extends HibernateDaoSupport {
 	public Long updateHelpTopic(HelpTopic helptopic) {
 		try {
 			
-			getSession().update(helptopic);
+			getHibernateTemplate().update(helptopic);
 
 		} catch (HibernateException ex) {
 			log.error("[updateHelpTopic]",ex);

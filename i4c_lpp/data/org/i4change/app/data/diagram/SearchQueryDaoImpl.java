@@ -110,7 +110,7 @@ public class SearchQueryDaoImpl extends HibernateDaoSupport {
 	public Long addSearchQueryByObject(SearchQuery searchQuery) {
 		try {
 			
-			Long searchQueryId = (Long) getSession().save(searchQuery);
+			Long searchQueryId = (Long) getHibernateTemplate().save(searchQuery);
 			
 			return searchQueryId;
 			
@@ -168,7 +168,7 @@ public class SearchQueryDaoImpl extends HibernateDaoSupport {
 	public Long udpateSearchQueryByObject(SearchQuery searchQuery) {
 		try {
 			
-			getSession().update(searchQuery);
+			getHibernateTemplate().update(searchQuery);
 			
 			return searchQuery.getSearchQueryId();
 			

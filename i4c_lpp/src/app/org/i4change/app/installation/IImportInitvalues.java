@@ -1,5 +1,7 @@
 package org.i4change.app.installation;
 
+import java.util.LinkedHashMap;
+
 public interface IImportInitvalues {
 
 	public static final String languageFolderName = "languages/";
@@ -24,5 +26,8 @@ public interface IImportInitvalues {
 			String userpass, String email, String defaultOrganisationName);
 
 	public abstract void loadInitLanguages(String filePath) throws Exception;
+
+	public LinkedHashMap<Integer, String> getLanguageFiles(String filePath)
+			throws Exception;
 
 }

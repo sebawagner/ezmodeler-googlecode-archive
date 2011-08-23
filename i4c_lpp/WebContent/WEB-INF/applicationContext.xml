@@ -11,9 +11,10 @@
     <!--
     <bean id="dataSource" class="org.apache.commons.dbcp.BasicDataSource">
 	 -->
+	 
     <bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource"> 
          <property name="driverClassName" value="com.mysql.jdbc.Driver" /> 
-         <property name="url" value="jdbc:mysql://localhost/i4change_dev3?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=utf-8" /> 
+         <property name="url" value="jdbc:mysql://localhost/i4change?autoReconnect=true&amp;useUnicode=true&amp;createDatabaseIfNotExist=true&amp;characterEncoding=utf-8" /> 
          <property name="username" value="root" /> 
          <property name="password" value="admin" /> 
     </bean>
@@ -29,7 +30,9 @@
         <property name="hibernateProperties">
             <props>
             	
+            
             <prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop>	
+            
         	<!--
             <prop key="hibernate.dialect">org.hibernate.dialect.MySQLMyISAMDialect</prop>
              -->
@@ -39,10 +42,10 @@
             <prop key="hibernate.connection.useUnicode">true</prop>
             <prop key="hibernate.hbm2ddl.auto">update</prop>
             <prop key="hibernate.cglib.use_reflection_optimizer">true</prop>
-            <prop key="hibernate.show_sql">false</prop>
+            <prop key="hibernate.show_sql">true</prop>
             <prop key="hibernate.use_sql_comments">true</prop>
             <prop key="hibernate.generate_statistics">false</prop>
-            <prop key="hibernate.format_sql">false</prop>
+            <prop key="hibernate.format_sql">true</prop>
             <prop key="hibernate.generate_statistics">false</prop>
             <prop key="hibernate.jdbc.batch_size">0</prop>
             <prop key="hibernate.jdbc.use_streams_for_binary">true</prop>

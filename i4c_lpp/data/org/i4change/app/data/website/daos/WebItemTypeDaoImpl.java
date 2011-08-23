@@ -56,7 +56,7 @@ public class WebItemTypeDaoImpl extends HibernateDaoSupport {
 			webItemType.setLabel_number(label_number);
 			webItemType.setInserted(new Date());
 			
-			Long webItemTypeId = (Long) getSession().save(webItemType);
+			Long webItemTypeId = (Long) getHibernateTemplate().save(webItemType);
 			
 			return webItemTypeId;
 			

@@ -50,7 +50,7 @@ public class TransactionPaypalDaoImpl extends HibernateDaoSupport {
 			transactionPaypal.setFirstName(user.getFirstname());
 			transactionPaypal.setLastName(user.getLastname());
 			
-			Long transactionPaypalId = (Long) getSession().save(transactionPaypal);
+			Long transactionPaypalId = (Long) getHibernateTemplate().save(transactionPaypal);
 			
 			return transactionPaypalId;
 		} catch (HibernateException ex) {
@@ -64,7 +64,7 @@ public class TransactionPaypalDaoImpl extends HibernateDaoSupport {
 	public void updateTransaction(TransactionPaypal transactionPaypal){
 		try {
 			
-			getSession().update(transactionPaypal);
+			getHibernateTemplate().update(transactionPaypal);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateTransaction]",ex);

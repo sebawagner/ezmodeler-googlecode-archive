@@ -44,7 +44,7 @@ public class Salutationmanagement extends HibernateDaoSupport {
 			ti.setDeleted("false");
 			ti.setFieldvalues_id(fieldvalues_id);
 			ti.setStarttime(new Date());
-			Long salutations_id = (Long)getSession().save(ti);
+			Long salutations_id = (Long)getHibernateTemplate().save(ti);
 			
 			return salutations_id;
 		} catch (HibernateException ex) {

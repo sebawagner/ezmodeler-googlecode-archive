@@ -89,7 +89,7 @@ public class MailItemServiceDaoImpl extends HibernateDaoSupport {
 			mailItem.setFilePath(filePath);
 			mailItem.setSend(false);
 
-			Long mailItemId = (Long) getSession().save(mailItem);
+			Long mailItemId = (Long) getHibernateTemplate().save(mailItem);
 
 			//log.debug("addAssgineeObject: " + mailItemId);
 
@@ -110,7 +110,7 @@ public class MailItemServiceDaoImpl extends HibernateDaoSupport {
 			mailItem.setSend(true);
 			mailItem.setDeliverStatus(deliverStatus);
 
-			getSession().update(mailItem);
+			getHibernateTemplate().update(mailItem);
 
 		} catch (HibernateException ex) {
 			log.error("[updateMailItem]",ex);

@@ -52,7 +52,7 @@ public class ProjectUserDaoImpl extends HibernateDaoSupport {
 			projectUser.setUserId(userId);
 			projectUser.setInserted(new Date());
 			
-			Long projectUserId = (Long) getSession().save(projectUser);
+			Long projectUserId = (Long) getHibernateTemplate().save(projectUser);
 			
 			return projectUserId;
 		} catch (HibernateException ex) {
@@ -73,7 +73,7 @@ public class ProjectUserDaoImpl extends HibernateDaoSupport {
 			}
 			projectUser.setDeleted("true");
 			
-			getSession().update(projectUser);
+			getHibernateTemplate().update(projectUser);
 			
 			return projectUser.getProjectUserId();
 			

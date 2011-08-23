@@ -20,7 +20,7 @@ public class DiagramTypeDaoImpl extends HibernateDaoSupport {
 			diagramType.setInserted(new Date());
 			diagramType.setInternalName(internalName);
 
-			Long diagramTypeId = (Long) getSession().save(diagramType);
+			Long diagramTypeId = (Long) getHibernateTemplate().save(diagramType);
 
 			log.debug("added id " + diagramTypeId);
 
@@ -36,7 +36,7 @@ public class DiagramTypeDaoImpl extends HibernateDaoSupport {
 	public Long addDiagramTypeByObject(DiagramType diagramType) {
 		try {
 
-			Long diagramTypeId = (Long) getSession().save(diagramType);
+			Long diagramTypeId = (Long) getHibernateTemplate().save(diagramType);
 
 			log.debug("added id " + diagramTypeId);
 

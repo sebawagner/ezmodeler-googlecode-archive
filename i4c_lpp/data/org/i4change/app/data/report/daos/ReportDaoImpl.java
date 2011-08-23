@@ -65,7 +65,7 @@ public class ReportDaoImpl extends HibernateDaoSupport {
 			report.setStartProcessing(startDate);
 			report.setEndProcessing(endDate);
 			
-			Long reportId = (Long) getSession().save(report);
+			Long reportId = (Long) getHibernateTemplate().save(report);
 			
 			return reportId;
 		} catch (HibernateException ex) {
@@ -80,7 +80,7 @@ public class ReportDaoImpl extends HibernateDaoSupport {
 	public void updateReport(Report report){
 		try {
 			
-			getSession().update(report);
+			getHibernateTemplate().update(report);
 			
 		} catch (HibernateException ex) {
 			log.error("[updateReport]",ex);

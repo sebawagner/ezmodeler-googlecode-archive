@@ -158,7 +158,7 @@ public class EmailDaoImpl extends HibernateDaoSupport {
 				addr_emails.setStarttime(new Date());
 				addr_emails.setDeleted("false");
 
-				long addr_emails_id = (Long) getSession().save(addr_emails);
+				long addr_emails_id = (Long) getHibernateTemplate().save(addr_emails);
 				log.error("registerEmail addr_emails: " + addr_emails_id);
 				
 
@@ -188,7 +188,7 @@ public class EmailDaoImpl extends HibernateDaoSupport {
 			emails.setComment(comment);
 			emails.setDeleted("false");
 
-			long email_id = (Long) getSession().save(emails);
+			long email_id = (Long) getHibernateTemplate().save(emails);
 			log.error("registerEmail id: " + email_id);
 
 			return email_id;
@@ -244,7 +244,7 @@ public class EmailDaoImpl extends HibernateDaoSupport {
 		//        try {   
 		//            Object idf = HibernateUtil.creategetSession()(); 			getSession() getSession() = HibernateUtil.getgetSession()();
 		//            Transaction tx = getSession().beginTransaction();
-		//            getSession().save(emails);
+		//            getHibernateTemplate().save(emails);
 		//            getSession().flush();   
 		//            session.clear();
 		//            session.refresh(emails);
@@ -363,7 +363,7 @@ public class EmailDaoImpl extends HibernateDaoSupport {
 			Emails mail = this.getEmailById(mail_id);
 			mail.setEmail(email);
 			mail.setUpdatetime(new Date());
-            getSession().update(mail);
+            getHibernateTemplate().update(mail);
             return mail;
 		} catch (HibernateException ex) {
 			log.error("[updateUserEmail] "+ex);

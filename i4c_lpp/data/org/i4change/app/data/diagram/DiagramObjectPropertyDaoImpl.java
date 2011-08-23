@@ -36,9 +36,9 @@ public class DiagramObjectPropertyDaoImpl extends HibernateDaoSupport {
 
 			Long diagramObjectPropertyId = null;
 			if (isNew) {
-				diagramObjectPropertyId = (Long) getSession().save(diaObjectProperty);
+				diagramObjectPropertyId = (Long) getHibernateTemplate().save(diaObjectProperty);
 			} else {
-				getSession().update(diaObjectProperty);
+				getHibernateTemplate().update(diaObjectProperty);
 				diagramObjectPropertyId = diaObjectProperty.getDiagramObjectId();
 			}
 			
@@ -76,9 +76,9 @@ public class DiagramObjectPropertyDaoImpl extends HibernateDaoSupport {
 
 			Long diagramObjectPropertyId = null;
 			if (isNew) {
-				diagramObjectPropertyId = (Long) getSession().save(diaObjectProperty);
+				diagramObjectPropertyId = (Long) getHibernateTemplate().save(diaObjectProperty);
 			} else {
-				getSession().update(diaObjectProperty);
+				getHibernateTemplate().update(diaObjectProperty);
 				diagramObjectPropertyId = diaObjectProperty.getDiagramObjectId();
 			}
 

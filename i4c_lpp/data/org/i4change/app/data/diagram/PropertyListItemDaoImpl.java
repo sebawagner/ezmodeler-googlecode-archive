@@ -138,7 +138,7 @@ public class PropertyListItemDaoImpl extends HibernateDaoSupport {
 			propertyListItem.setValue(value);
 			propertyListItem.setPropertyId(propertyId);
 			
-			Long propertyListItemId = (Long) getSession().save(propertyListItem);
+			Long propertyListItemId = (Long) getHibernateTemplate().save(propertyListItem);
 		
 			//log.debug("select issueAssignee " + issueAssignee);
 		
@@ -166,7 +166,7 @@ public class PropertyListItemDaoImpl extends HibernateDaoSupport {
 			propertyListItem.setValue(value);
 			propertyListItem.setPropertyId(propertyId);
 			
-			getSession().update(propertyListItem);
+			getHibernateTemplate().update(propertyListItem);
 		
 			//log.debug("select issueAssignee " + issueAssignee);
 		
@@ -187,7 +187,7 @@ public class PropertyListItemDaoImpl extends HibernateDaoSupport {
 			propertyListItem.setDeleted("true");
 			propertyListItem.setUpdated(new Date());
 		
-			getSession().update(propertyListItem);
+			getHibernateTemplate().update(propertyListItem);
 		
 			//log.debug("select issueAssignee " + issueAssignee);
 		

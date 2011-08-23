@@ -86,7 +86,7 @@ public class DiscountDaoImpl extends HibernateDaoSupport {
 			discount.setInserted(new Date());
 			discount.setDeleted("false");
 			
-			Long discountId = (Long) getSession().save(discount);
+			Long discountId = (Long) getHibernateTemplate().save(discount);
 
 			return discountId;
 			// TODO: Add Usergroups to user
@@ -133,7 +133,7 @@ public class DiscountDaoImpl extends HibernateDaoSupport {
 	public void updateDiscount(Discount discount){
 		try {
 			
-			getSession().update(discount);
+			getHibernateTemplate().update(discount);
 			
 			// TODO: Add Usergroups to user
 			// users.setUsergroups(ResHandler.getGroupmanagement().getUserGroups(user_id));

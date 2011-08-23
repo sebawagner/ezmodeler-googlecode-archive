@@ -77,7 +77,7 @@ public class DiagramDocumentDaoImpl extends HibernateDaoSupport {
 			diagramDocument.setInserted(new Date());
 			diagramDocument.setInsertedBy(user_id);
 			
-			Long diagramDocumentId = (Long) getSession().save(diagramDocument);
+			Long diagramDocumentId = (Long) getHibernateTemplate().save(diagramDocument);
 
 			log.debug("dataCarrierDiagramObjectId: " + diagramDocumentId);
 
@@ -111,7 +111,7 @@ public class DiagramDocumentDaoImpl extends HibernateDaoSupport {
 			diagramDocument.setUpdated(new Date());
 			diagramDocument.setUpdatedBy(user_id);
 			
-			getSession().update(diagramDocument);
+			getHibernateTemplate().update(diagramDocument);
 
 			log.debug("dataCarrierDiagramObjectId: " + diagramDocumentId);
 
@@ -138,7 +138,7 @@ public class DiagramDocumentDaoImpl extends HibernateDaoSupport {
 			diagramDocument.setUpdated(new Date());
 			diagramDocument.setUpdatedBy(user_id);
 			
-			getSession().update(diagramDocument);
+			getHibernateTemplate().update(diagramDocument);
 
 			log.debug("dataCarrierDiagramObjectId: " + diagramDocumentId);
 

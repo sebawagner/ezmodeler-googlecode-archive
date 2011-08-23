@@ -326,7 +326,7 @@ public class Usermanagement extends HibernateDaoSupport {
 	private void updateLastLogin(Users us) {
 		try {
 			us.setLastlogin(new Date());
-			getSession().update(us);
+			getHibernateTemplate().update(us);
 		} catch (HibernateException ex) {
 			log.error(ex);
 		} catch (Exception ex2) {
@@ -416,7 +416,7 @@ public class Usermanagement extends HibernateDaoSupport {
 					
 //					log.info("USER " + us.getLastname());
 
-					getSession().update(us);
+					getHibernateTemplate().update(us);
 					
 					this.discountDaoImpl.saveOrUpdateDiscountsListByUser(discounts, user_id);
 					
@@ -508,7 +508,7 @@ public class Usermanagement extends HibernateDaoSupport {
 					
 //					log.info("USER " + us.getLastname());
 
-					getSession().update(us);
+					getHibernateTemplate().update(us);
 					
 					if (sendMail) {
 						Long default_lang_id = Long.valueOf(this.configurationmanagement.
@@ -1284,7 +1284,7 @@ public class Usermanagement extends HibernateDaoSupport {
 					this.addressmanagement.updateAdress(user.getAdresses());
 					savedUser.setAdresses(this.addressmanagement.getAdressbyId(user.getAdresses().getAdresses_id()));
 
-					getSession().update(savedUser);
+					getHibernateTemplate().update(savedUser);
 					//session.flush();
 					
 					return returnLong;
