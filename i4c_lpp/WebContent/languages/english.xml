@@ -3050,4 +3050,67 @@ to add new Languages or modify/customize it use the LanguageEditor
   <string id="1343" name="objecty type name">
     <value>All Object-Types</value>
   </string>
+  <string id="1344" name="label">
+    <value>Please wait while loading...</value>
+  </string>
+  <string id="1345" name="label">
+    <value>Goto first</value>
+  </string>
+  <string id="1346" name="label">
+    <value>UserDefinied</value>
+  </string>
+  <string id="1347" name="label">
+    <value>userDefiniedType</value>
+  </string>
+  <string id="1347" name="label">
+    <value>userDefiniedType</value>
+  </string>
+  <string id="1348" name="label">
+    <value>Login</value>
+  </string>
+  <string id="1349" name="label">
+    <value>Sign Up</value>
+  </string>
+  <string id="1350" name="label">
+    <value>isMasterRoot</value>
+  </string>
+  <string id="1351" name="label">
+    <value>webItemLayout</value>
+  </string>
+  <string id="1352" name="label">
+    <value>Login</value>
+  </string>
+  <string id="1353" name="label">
+    <value>Sign Up</value>
+  </string>
+  <string id="1354" name="label">
+    <value>Validation type list</value>
+  </string>
+  <string id="1355" name="label">
+    <value>listValuesLabel</value>
+  </string>
+  <string id="1356" name="label">
+    <value>Add</value>
+  </string>
+  <string id="1356" name="label">
+    <value>Properties</value>
+  </string>
+  <string id="1357" name="label">
+    <value>Property-Editor</value>
+  </string>
+  <string id="1358" name="label">
+    <value>Value</value>
+  </string>
+  <string id="1359" name="label">
+    <value>Add</value>
+  </string>
+  <string id="1390" name="label">
+    <value>Cancel</value>
+  </string>
+  <string id="1391" name="label">
+    <value>Filename</value>
+  </string>
+  <string id="1392" name="label">
+    <value>Filename</value>
+  </string>
 </language>

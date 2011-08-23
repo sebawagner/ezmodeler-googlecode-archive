@@ -57,7 +57,7 @@ function getLabelTagByNo(no,labelid){
     if (labelid == 0) {
     	return '';
     }
-    return 'error';
+    return 'error'+' ['+labelid+']';
 }
 
 function quicklink(action){
