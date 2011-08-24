@@ -25,8 +25,8 @@
    </class>
  
    <view bgcolor="0x0000ff" width="20" height="20"
-       onmousedown="this.colorpicker.setAttribute("visible",true); LzTrack.activate('mymenu');"
-       onmouseup="this.colorpicker.setAttribute("visible",false); LzTrack.deactivate('mymenu');">
+       onmousedown="this.colorpicker.setAttribute('visible',true); LzTrack.activate('mymenu');"
+       onmouseup="this.colorpicker.setAttribute('visible',false); LzTrack.deactivate('mymenu');">
      <view name="colorpicker" visible="false" x="10" y="10">
        <attribute name="trackgroup" value="mymenu" type="string"/>
        <handler name="onnewcolor" args="newcolor">

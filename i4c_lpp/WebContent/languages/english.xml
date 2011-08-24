@@ -3104,6 +3104,99 @@ to add new Languages or modify/customize it use the LanguageEditor
   <string id="1359" name="label">
     <value>Add</value>
   </string>
+  <string id="1360" name="label">
+    <value>Close</value>
+  </string>
+  <string id="1361" name="label">
+    <value>Search for datacarriers</value>
+  </string>
+  <string id="1362" name="label">
+    <value></value>
+  </string>
+  <string id="1363" name="label">
+    <value>Name is empty! Fill in some text please!</value>
+  </string>
+  <string id="1364" name="label">
+    <value>System</value>
+  </string>
+  <string id="1365" name="label">
+    <value>People</value>
+  </string>
+  <string id="1366" name="label">
+    <value>Diagram</value>
+  </string>
+  <string id="1367" name="label">
+    <value>Objecttype</value>
+  </string>
+  <string id="1368" name="label">
+    <value>isSidebarItem</value>
+  </string>
+  <string id="1369" name="label">
+    <value>Name</value>
+  </string>
+  <string id="1370" name="label">
+    <value>Text</value>
+  </string>
+  <string id="1371" name="label">
+    <value>Objectypes mod</value>
+  </string>
+  <string id="1372" name="label">
+    <value>Add</value>
+  </string>
+  <string id="1373" name="label">
+    <value>There are no objecttype defined!</value>
+  </string>
+  <string id="1374" name="label">
+    <value>Object is empty!</value>
+  </string>
+  <string id="1374" name="label">
+    <value>Object is empty!</value>
+  </string>
+  <string id="1375" name="label">
+    <value>Objecttype</value>
+  </string>
+  <string id="1376" name="label">
+    <value>Delete</value>
+  </string>
+  <string id="1377" name="label">
+    <value>Edit</value>
+  </string>
+  <string id="1378" name="label">
+    <value>transactionId</value>
+  </string>
+  <string id="1379" name="label">
+    <value>Date</value>
+  </string>
+  <string id="1380" name="label">
+    <value>Status</value>
+  </string>
+  <string id="1381" name="label">
+    <value>Name</value>
+  </string>
+  <string id="1382" name="label">
+    <value>Value</value>
+  </string>
+  <string id="1383" name="label">
+    <value>Expire Date</value>
+  </string>
+  <string id="1384" name="label">
+    <value>[1384]</value>
+  </string>
+  <string id="1385" name="label">
+    <value>[1385]</value>
+  </string>
+  <string id="1386" name="label">
+    <value>Drill down</value>
+  </string>
+  <string id="1387" name="label">
+    <value>Drill left</value>
+  </string>
+  <string id="1388" name="label">
+    <value>List is empty and this is an Outputflow! Action not available!</value>
+  </string>
+  <string id="1389" name="label">
+    <value>List is empty! Action not available!</value>
+  </string>
   <string id="1390" name="label">
     <value>Cancel</value>
   </string>
