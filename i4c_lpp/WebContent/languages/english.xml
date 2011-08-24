@@ -3113,4 +3113,277 @@ to add new Languages or modify/customize it use the LanguageEditor
   <string id="1392" name="label">
     <value>Filename</value>
   </string>
+  <string id="1393" name="label">
+    <value></value>
+  </string>
+  <string id="1394" name="label">
+    <value>ShowFlowText</value>
+  </string>
+  <string id="1395" name="label">
+    <value>Description</value>
+  </string>
+  <string id="1396" name="label">
+    <value>Properties</value>
+  </string>
+  <string id="1397" name="label">
+    <value>isHelpItem</value>
+  </string>
+  <string id="1398" name="label">
+    <value>Support</value>
+  </string>
+  <string id="1399" name="label">
+    <value>Buy</value>
+  </string>
+  <string id="1400" name="label">
+    <value>Buy</value>
+  </string>
+  <string id="1401" name="label">
+    <value>Contact to Support Team</value>
+  </string>
+  <string id="1402" name="label">
+    <value>Change project</value>
+  </string>
+  <string id="1403" name="label">
+    <value>Type A</value>
+  </string>
+  <string id="1404" name="label">
+    <value>Type B</value>
+  </string>
+  <string id="1405" name="label">
+    <value>Type C</value>
+  </string>
+  <string id="1406" name="label">
+    <value>Order (Number 0-9999)</value>
+  </string>
+  <string id="1407" name="label">
+    <value>Start first start wizzard!</value>
+  </string>
+  <string id="1408" name="label">
+    <value>You can use the first start wizzard to set up your initial project. The wizzard will help you in guiding through the basic steps of ezModeler!</value>
+  </string>
+  <string id="1409" name="label">
+    <value>Create project</value>
+  </string>
+  <string id="1410" name="label">
+    <value>Create organization</value>
+  </string>
+  <string id="1411" name="label">
+    <value>Create process</value>
+  </string>
+  <string id="1412" name="label">
+    <value>Create flow</value>
+  </string>
+  <string id="1413" name="label">
+    <value>There are different ways of creating the organization. We currently support the following approaches as guided tour:</value>
+  </string>
+  <string id="1414" name="label">
+    <value>Top-Down Approach</value>
+  </string>
+  <string id="1415" name="label">
+    <value>Top-Down Approach</value>
+  </string>
+  <string id="1416" name="label">
+    <value>Minimize</value>
+  </string>
+  <string id="1417" name="label">
+    <value>Maximize</value>
+  </string>
+  <string id="1418" name="label">
+    <value>Search</value>
+  </string>
+  <string id="1419" name="label">
+    <value>Object-Types</value>
+  </string>
+  <string id="1420" name="label">
+    <value>Properties</value>
+  </string>
+  <string id="1421" name="label">
+    <value>Add</value>
+  </string>
+  <string id="1422" name="label">
+    <value>[1422]</value>
+  </string>
+  <string id="1423" name="label">
+    <value>Delete</value>
+  </string>
+  <string id="1424" name="label">
+    <value>Search result</value>
+  </string>
+  <string id="1425" name="label">
+    <value>Object types</value>
+  </string>
+  <string id="1425" name="label">
+    <value>Object types</value>
+  </string>
+  <string id="1426" name="label">
+    <value>Property</value>
+  </string>
+  <string id="1427" name="label">
+    <value>Last Modified</value>
+  </string>
+  <string id="1428" name="label">
+    <value>Status A</value>
+  </string>
+  <string id="1429" name="label">
+    <value>Status B</value>
+  </string>
+  <string id="1430" name="label">
+    <value>Like</value>
+  </string>
+  <string id="1431" name="label">
+    <value>greater</value>
+  </string>
+  <string id="1432" name="label">
+    <value>greater equals</value>
+  </string>
+  <string id="1433" name="label">
+    <value>smaller</value>
+  </string>
+  <string id="1434" name="label">
+    <value>smaller equals</value>
+  </string>
+  <string id="1435" name="label">
+    <value>!=</value>
+  </string>
+  <string id="1436" name="label">
+    <value>Not like</value>
+  </string>
+  <string id="1437" name="label">
+    <value>Custom settings</value>
+  </string>
+  <string id="1438" name="label">
+    <value>=</value>
+  </string>
+  <string id="1439" name="label">
+    <value>Status C</value>
+  </string>
+  <string id="1440" name="label">
+    <value>Object details</value>
+  </string>
+  <string id="1441" name="label">
+    <value>Search</value>
+  </string>
+  <string id="1442" name="label">
+    <value>[1442]</value>
+  </string>
+  <string id="1443" name="label">
+    <value>Created</value>
+  </string>
+  <string id="1444" name="label">
+    <value>Created by</value>
+  </string>
+  <string id="1445" name="label">
+    <value>Last modified</value>
+  </string>
+  <string id="1446" name="label">
+    <value>Last modified by</value>
+  </string>
+  <string id="1447" name="label">
+    <value>[1447]</value>
+  </string>
+  <string id="1448" name="label">
+    <value>[1448]</value>
+  </string>
+  <string id="1449" name="label">
+    <value>Diagram Type</value>
+  </string>
+  <string id="1450" name="label">
+    <value>[1450]</value>
+  </string>
+  <string id="1451" name="label">
+    <value>[1451]</value>
+  </string>
+  <string id="1452" name="label">
+    <value>Object Details</value>
+  </string>
+  <string id="1453" name="label">
+    <value>Type</value>
+  </string>
+  <string id="1454" name="label">
+    <value>Properties</value>
+  </string>
+  <string id="1455" name="label">
+    <value>From</value>
+  </string>
+  <string id="1456" name="label">
+    <value>To</value>
+  </string>
+  <string id="1457" name="label">
+    <value>Delete</value>
+  </string>
+  <string id="1458" name="label">
+    <value>Search</value>
+  </string>
+  <string id="1459" name="label">
+    <value>Search</value>
+  </string>
+  <string id="1459" name="label">
+    <value>Search</value>
+  </string>
+  <string id="1460" name="label">
+    <value>[1460]</value>
+  </string>
+  <string id="1461" name="label">
+    <value>Save</value>
+  </string>
+  <string id="1462" name="label">
+    <value>Save Filter</value>
+  </string>
+  <string id="1463" name="label">
+    <value>Details</value>
+  </string>
+  <string id="1464" name="label">
+    <value>[1464]</value>
+  </string>
+  <string id="1465" name="label">
+    <value>Save</value>
+  </string>
+  <string id="1466" name="label">
+    <value>Documents</value>
+  </string>
+  <string id="1467" name="label">
+    <value>Documents</value>
+  </string>
+  <string id="1468" name="label">
+    <value>Name</value>
+  </string>
+  <string id="1469" name="label">
+    <value>Url</value>
+  </string>
+  <string id="1470" name="label">
+    <value>Type</value>
+  </string>
+  <string id="1471" name="label">
+    <value>Attachement</value>
+  </string>
+  <string id="1472" name="label">
+    <value>Info</value>
+  </string>
+  <string id="1473" name="label">
+    <value>From</value>
+  </string>
+  <string id="1474" name="label">
+    <value>Stop</value>
+  </string>
+  <string id="1475" name="label">
+    <value>Save</value>
+  </string>
+  <string id="1476" name="label">
+    <value>Cancel</value>
+  </string>
+  <string id="1477" name="label">
+    <value>Upload</value>
+  </string>
+  <string id="1478" name="label">
+    <value>No file selected!</value>
+  </string>
+  <string id="1479" name="label">
+    <value>No diagram selected!</value>
+  </string>
+  <string id="1480" name="label">
+    <value>Delete</value>
+  </string>
+  <string id="1481" name="label">
+    <value>Delete document?</value>
+  </string>
 </language>

@@ -73,6 +73,7 @@
 	
 	<class name="buyMenuBar" extends="_labelMenu" 
 		   buttonClassName="_menubutton" labelid="1398" width="250" >
+		   <!-- 
         <_labelMenuItem labelid="1399" >
         	<handler name="onclick">
         		lz.Browser.loadURL("http://www.i4change.com/buy-now","_blank");
@@ -83,9 +84,10 @@
                 lz.Browser.loadURL("http://ezmodeler.org/toegang-3-maanden/","_blank");
             </handler>
         </_labelMenuItem>
+         -->
         <_labelMenuItem labelid="1401" >
             <handler name="onclick">
-                lz.Browser.loadURL("http://ezmodeler.org/toegang-3-maanden/","_blank");
+                lz.Browser.loadURL("http://www.ezmodeler.org/team/","_blank");
             </handler>
         </_labelMenuItem>
     </class>
