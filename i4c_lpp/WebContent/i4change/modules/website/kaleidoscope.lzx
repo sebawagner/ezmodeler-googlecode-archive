@@ -501,6 +501,7 @@
     
     </view>
     
+    <!-- 
     <view resource="background_login_website" align="right" width="173">
     	
 	    <handler name="oninit">
@@ -529,7 +530,7 @@
         </simpleLabelButton>  
         
     </view>
-    
+     -->
     
     
 </class>
