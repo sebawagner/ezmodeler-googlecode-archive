@@ -3078,10 +3078,10 @@ to add new Languages or modify/customize it use the LanguageEditor
     <value>webItemLayout</value>
   </string>
   <string id="1352" name="label">
-    <value>Login</value>
+    <value>The wizzard will guide you through your first steps!</value>
   </string>
   <string id="1353" name="label">
-    <value>Sign Up</value>
+    <value>Start now</value>
   </string>
   <string id="1354" name="label">
     <value>Validation type list</value>

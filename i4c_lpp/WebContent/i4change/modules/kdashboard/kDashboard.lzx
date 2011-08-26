@@ -80,7 +80,7 @@
         
         <labelText labelid="1408" x="2" width="256" multiline="true" y="140" />
         
-        <simpleLabelButton labelid="1407" height="30" x="2" width="256" y="184">
+        <simpleLabelButton labelid="1407" height="30" x="2" width="256" y="204">
         	<view x="4" y="2" resource="nav_right_green_rsc" />
         	<handler name="onclick">
         		new lz.firstStartWizzard(canvas);

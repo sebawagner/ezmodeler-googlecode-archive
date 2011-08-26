@@ -28,6 +28,7 @@
         <property name="organisationDaoImpl" ref="i4change.OrganisationDaoImpl" />
         <property name="countryDaoImpl" ref="i4change.CountryDaoImpl" />
         <property name="errorManagement" ref="i4change.ErrorManagement" />
+        <property name="webItemDaoImpl" ref="i4change.WebItemDaoImpl" />
     </bean>
     
     
